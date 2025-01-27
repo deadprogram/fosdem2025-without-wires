@@ -12,21 +12,8 @@ build/showvideo:
 showvideo: builddir build/showvideo
 	./build/showvideo 2
 
-showphone:
-	scrcpy
+advertising:
+	tinygo flash -size short -target=pico-w -monitor ./demo/advertising
 
-dronevideo: builddir build/showvideo
-	./build/showvideo 4
-
-tinyscan:
-	tinygo flash -size short -target=pybadge ./demo/tinyscan/
-
-cubelife:
-	tinygo flash -size short -target=metro-m4-airlift -opt=2 -monitor ./demo/cubelife/
-
-minidrone:
-	tinygo flash -size short -target=pybadge -ldflags="-X main.DeviceAddress=E0:14:DC:85:3D:D1" ./demo/minidrone/
-
-tello:
-	tinygo flash -size short -target=pybadge -ldflags="-X main.ssid=TELLO-AA5556" ./demo/tello/
-
+scanner:
+	go run ./demo/scanner

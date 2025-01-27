@@ -12,14 +12,14 @@ func main() {
 	must("enable BLE stack", adapter.Enable())
 	adv := adapter.DefaultAdvertisement()
 	must("config adv", adv.Configure(bluetooth.AdvertisementOptions{
-		LocalName: "Go Bluetooth",
+		AdvertisementType: bluetooth.AdvertisingTypeScanInd,
+		LocalName:         "Go Bluetooth",
 	}))
 	must("start adv", adv.Start())
 
-	println("advertising...")
-	address, _ := adapter.Address()
+	println("starting advertising...")
 	for {
-		println("Go Bluetooth /", address.MAC.String())
+		println("Go Bluetooth is advertising.")
 		time.Sleep(time.Second)
 	}
 }
