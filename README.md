@@ -1,7 +1,7 @@
-# FOSDEM 2024
+# FOSDEM 2025
 
-## "Go Without Wires Strikes Back"
+## "Return To Go Without Wires"
 
-Copyright 2018-2024 Ron Evans.
+Copyright 2018-2025 Ron Evans.
 
 Other included content copyright of their respective holders.
